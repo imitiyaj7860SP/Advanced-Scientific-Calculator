@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Advanced Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+
+<body>
+    <main class="app" aria-label="Advanced Scientific Calculator">
+        <header class="topbar">
+            <h1>Advanced Calculator</h1>
+            <div class="controls">
+                <label class="theme-switch">
+                    <input id="themeToggle" type="checkbox" aria-label="Toggle dark mode">
+                    <span class="slider"></span>
+                </label>
+                <button id="toggleSci" class="btn small">Sci</button>
+            </div>
+        </header>
+
+        <section class="calculator">
+            <div class="left">
+                <div class="display" id="display" role="region" aria-live="polite">
+                    <div id="historyLine" class="history-line">&nbsp;</div>
+                    <div id="resultLine" class="result-line">0</div>
+                </div>
+
+                <div class="keypad" id="keypad">
+                    <div class="row ops">
+                        <button class="btn small" data-action="clear">C</button>
+                        <button class="btn small" data-action="back">⌫</button>
+                        <button class="btn small" data-action="percent">%</button>
+                        <button class="btn small" data-value="/">÷</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn" data-value="7">7</button>
+                        <button class="btn" data-value="8">8</button>
+                        <button class="btn" data-value="9">9</button>
+                        <button class="btn" data-value="*">×</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn" data-value="4">4</button>
+                        <button class="btn" data-value="5">5</button>
+                        <button class="btn" data-value="6">6</button>
+                        <button class="btn" data-value="-">−</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn" data-value="1">1</button>
+                        <button class="btn" data-value="2">2</button>
+                        <button class="btn" data-value="3">3</button>
+                        <button class="btn" data-value="+">+</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn wide" data-value="0">0</button>
+                        <button class="btn" data-value=".">.</button>
+                        <button class="btn accent" data-action="equals">=</button>
+                    </div>
+
+                    <!-- memory row -->
+                    <div class="row mem">
+                        <button class="btn small" data-action="mc">MC</button>
+                        <button class="btn small" data-action="mr">MR</button>
+                        <button class="btn small" data-action="mplus">M+</button>
+                        <button class="btn small" data-action="mminus">M−</button>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="right">
+                <section class="scientific" id="scientific">
+                    <div class="row">
+                        <button class="btn small" data-fn="sin">sin</button>
+                        <button class="btn small" data-fn="cos">cos</button>
+                        <button class="btn small" data-fn="tan">tan</button>
+                        <button class="btn small" data-fn="ln">ln</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn small" data-fn="asin">asin</button>
+                        <button class="btn small" data-fn="acos">acos</button>
+                        <button class="btn small" data-fn="atan">atan</button>
+                        <button class="btn small" data-fn="log">log</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn small" data-fn="sqrt">√</button>
+                        <button class="btn small" data-fn="pow2">x²</button>
+                        <button class="btn small" data-fn="pow3">x³</button>
+                        <button class="btn small" data-fn="pow">xʸ</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn small" data-action="pi">π</button>
+                        <button class="btn small" data-action="e">e</button>
+                        <button class="btn small" data-action="paren">( )</button>
+                        <button class="btn small" data-action="clear-entry">CE</button>
+                    </div>
+                </section>
+
+                <section class="history" id="history">
+                    <div class="history-header">
+                        <h2>History</h2>
+                        <button id="clearHistory" class="btn tiny">Clear</button>
+                    </div>
+                    <ul id="historyList" class="history-list" role="list"></ul>
+                </section>
+            </aside>
+        </section>
+
+        <footer class="footer">
+            Developed by Mohammad Imitiyaj Ali
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
